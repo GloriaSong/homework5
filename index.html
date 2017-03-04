@@ -1,1 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise1</title>
+ <script src="echarts.min.js"></script>
+ 
+
+</head>
+
+<body>
+ <div id="main1" style="width: 600px;height:400px;"></div>
+ <div id="main2" style="width: 600px;height:400px;"></div>
+
+    <script type="text/javascript">
+option = {
+    title: {
+        text: 'Hong Kong Population',
+        subtext: 'Data Retrieved from DATA.GOV.HK'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['Year 1991', 'Year 1996','Year 2001']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Male','Female']
+    },
+    series: [
+        {
+            name: 'Year 1991',
+            type: 'bar',
+            data: [2811991,2710290]
+        },
+        {
+            name: 'Year 1996',
+            type: 'bar',
+            data: [3108107,3109449]
+        },
+         {
+            name: 'Year 2001',
+            type: 'bar',
+            data: [3285344,3423045]
+        }
+    ]
+};
+</script>
+
+</body>
+</html>
 
