@@ -70,6 +70,19 @@ option = {
         option['series'][1]['stack'] = 'population';
      
 </script>
+	<div id="main2" style="width: 600px;height:400px;"></div>	
+ 	<script type="text/javascript">
+	$(function(){
+		$.getJSON('option.json',function(data){
+			var option =data;
+			var myChart1 = echarts.init(document.getElementById('main2'));
+			myChart1.setOption(option);
+		})
+	});
+	</script>
+	
+	
+	
 
 </body>
 </html>
