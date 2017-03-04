@@ -10,7 +10,6 @@
 
 <body>
  <div id="main1" style="width: 600px;height:400px;"></div>
- <div id="main2" style="width: 600px;height:400px;"></div>
 
     <script type="text/javascript">
 option = {
@@ -25,7 +24,8 @@ option = {
         }
     },
     legend: {
-        data: ['Year 1991', 'Year 1996','Year 2001']
+        data: ['Year 1991', 'Year 1996','Year 2001'],
+		left:'35%',
     },
     grid: {
         left: '3%',
@@ -33,11 +33,11 @@ option = {
         bottom: '3%',
         containLabel: true
     },
-    xAxis: {
+    yAxis: {
         type: 'value',
         boundaryGap: [0, 0.01]
     },
-    yAxis: {
+    xAxis: {
         type: 'category',
         data: ['Male','Female']
     },
@@ -59,8 +59,15 @@ option = {
         }
     ]
 };
+
+      // Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        myChart1.setOption(option);
+
+        option['series'][0]['stack'] = 'population';
+        option['series'][1]['stack'] = 'population';
+     
 </script>
 
 </body>
 </html>
-
