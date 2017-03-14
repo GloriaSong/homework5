@@ -1,89 +1,74 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>exercise1</title>
- <script src="echarts.min.js"></script> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 
+    <meta charset="UTF-8">
+    <title>Distribution of Educational Attainment</title>
+    <script src="echarts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 
 </head>
 
 <body>
- <div id="main1" style="width: 600px;height:400px;"></div>
+
+    <div id="main1" style="width: 700px;height:400px;"></div>
 
     <script type="text/javascript">
-option = {
-    title: {
-        text: 'Hong Kong Population',
-        subtext: 'Data Retrieved from DATA.GOV.HK',
-    },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'shadow'
-        }
-    },
-    legend: {
-        data: ['Year 1991', 'Year 1996','Year 2001'],
-		top: '12%',
-		left:'0',
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-		top:'25%',
-        bottom: '3%',
-        containLabel: true
-    },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, 0.01]
-    },
-    xAxis: {
-        type: 'category',
-        data: ['Male','Female']
-    },
-    series: [
-        {
-            name: 'Year 1991',
-            type: 'bar',
-            data: [2811991,2710290]
-        },
-        {
-            name: 'Year 1996',
-            type: 'bar',
-            data: [3108107,3109449]
-        },
-         {
-            name: 'Year 2001',
-            type: 'bar',
-            data: [3285344,3423045]
-        }
-    ]
-};
+        option = {
+            title: {
+                text: 'Distribution of Educational Attainment of Population Aged 15 and Over',
+                subtext: 'Census and Statistics Department of Hong Kong',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                top: '6%',
+                data: ['Primary and below', 'Secondary', 'Diploma/Certificate course', 'Sub-degree course', 'Degree course']
+            },
+            series: [{
+                name: 'Educational Attainment',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [{
+                    value: 19.6,
+                    name: 'Primary and below'
+                }, {
+                    value: 50.5,
+                    name: 'Secondary'
+                }, {
+                    value: 3.2,
+                    name: 'Diploma/Certificate course'
+                }, {
+                    value: 4.6,
+                    name: 'Sub-degree course'
+                }, {
+                    value: 22,
+                    name: 'Degree course'
+                }],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
 
-      // Use the option to display chart
         var myChart1 = echarts.init(document.getElementById('main1'));
         myChart1.setOption(option);
+    </script>
 
-        option['series'][0]['stack'] = 'population';
-        option['series'][1]['stack'] = 'population';
-     
-</script>
-	<div id="main2" style="width: 600px;height:400px;"></div>	
- 	<script type="text/javascript">
-	$(function(){
-		$.getJSON('option.json',function(data){
-			var option =data;
-			var myChart1 = echarts.init(document.getElementById('main2'));
-			myChart1.setOption(option);
-		})
-	});
-	</script>
-	
-	
-	
+
+
 
 </body>
+
 </html>
