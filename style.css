@@ -1,0 +1,108 @@
+body {
+    background-color: antiquewhite;
+    ;
+}
+
+a:link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a:active {
+    color: #fff;
+    font-weight: bold;
+}
+
+a:visited {
+    color: papayawhip;
+    font-weight: bold;
+}
+
+a:hover {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.header {
+    background-image: url("http://picovico.com/wp-content/uploads/2015/11/yourstory-education.jpg");
+    background-position: bottom;
+    background-size: 100%;
+    height: 440px;
+    margin: auto;
+}
+
+h1 h2 {
+    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+}
+
+.header h1 {
+    vertical-align: middle;
+    color: #F45F29;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: ;
+    margin: 0;
+    padding-top: 120px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    top: 15%;
+}
+
+h3 {
+    text-align: center;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkblue;
+}
+
+.caption {
+    font-style: italic;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.text {
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.table {
+    padding: 15px;
+}
+
+table td,
+tr {
+    border: solid 2px darkslateblue;
+    padding: 3px;
+}
+
+.reference {
+    font-size: 18px;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol li {
+    display: block;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: papayawhip;
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

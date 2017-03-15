@@ -6,65 +6,148 @@
     <title>Distribution of Educational Attainment</title>
     <script src="echarts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <div class="header">
+        <h1>Educational Attainment </br>of Hong Kong People</h1>
+        <h3>By Gloria Song</h3>
+    </div>
 
-    <div id="main1" style="width: 700px;height:400px;"></div>
+    <div class="container">
 
-    <script type="text/javascript">
-        option = {
-            title: {
-                text: 'Distribution of Educational Attainment of Population Aged 15 and Over',
-                subtext: 'Census and Statistics Department of Hong Kong',
-                x: 'center'
-            },
-            tooltip: {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                orient: 'vertical',
-                left: 'left',
-                top: '6%',
-                data: ['Primary and below', 'Secondary', 'Diploma/Certificate course', 'Sub-degree course', 'Degree course']
-            },
-            series: [{
-                name: 'Educational Attainment',
-                type: 'pie',
-                radius: '55%',
-                center: ['50%', '60%'],
-                data: [{
-                    value: 19.6,
-                    name: 'Primary and below'
-                }, {
-                    value: 50.5,
-                    name: 'Secondary'
-                }, {
-                    value: 3.2,
-                    name: 'Diploma/Certificate course'
-                }, {
-                    value: 4.6,
-                    name: 'Sub-degree course'
-                }, {
-                    value: 22,
-                    name: 'Degree course'
-                }],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }]
-        };
+        <h3>Distribution of Educational Attainment of Population Aged 15 and Over</h3>
+        <div class="row">
+            <div class="col-md-6">
 
-        var myChart1 = echarts.init(document.getElementById('main1'));
-        myChart1.setOption(option);
-    </script>
+                <div id="main1" style="width: 700px;height:400px;"></div>
+
+                <script type="text/javascript">
+                    option = {
+                        title: {
+                            text: 'Data for 2010 in percentage',
+                            x: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c}"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: '6%',
+                            top: '6%',
+                            data: ['Primary and below', 'Secondary', 'Diploma/Certificate course and Sub-degree course', 'Degree course']
+                        },
+                        series: [{
+                            name: 'Educational Attainment',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: [{
+                                value: 22.1,
+                                name: 'Primary and below'
+                            }, {
+                                value: 52,
+                                name: 'Secondary'
+                            }, {
+                                value: 7.4,
+                                name: 'Diploma/Certificate course and Sub-degree course'
+                            }, {
+                                value: 18.5,
+                                name: 'Degree course'
+                            }],
+                            itemStyle: {
+                                emphasis: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }]
+                    };
+
+                    var myChart1 = echarts.init(document.getElementById('main1'));
+                    myChart1.setOption(option);
+                </script>
+            </div>
+
+            <div class="col-md-6">
+                <div id="main2" style="width: 700px;height:400px;"></div>
+
+                <script type="text/javascript">
+                    option = {
+                        title: {
+                            text: 'Data for 2014 in percentage',
+                            x: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c}"
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: '6%',
+                            top: '6%',
+                            data: ['Primary and below', 'Secondary', 'Diploma/Certificate course', 'Sub-degree course', 'Degree course']
+                        },
+                        series: [{
+                            name: 'Educational Attainment',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: [{
+                                value: 19.6,
+                                name: 'Primary and below'
+                            }, {
+                                value: 50.5,
+                                name: 'Secondary'
+                            }, {
+                                value: 3.2,
+                                name: 'Diploma/Certificate course'
+                            }, {
+                                value: 4.6,
+                                name: 'Sub-degree course'
+                            }, {
+                                value: 22,
+                                name: 'Degree course'
+                            }],
+                            itemStyle: {
+                                emphasis: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }]
+                    };
+
+                    var myChart2 = echarts.init(document.getElementById('main2'));
+                    myChart2.setOption(option);
+                </script>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2> Population by Age</h2>
+        </div>
+    </div>
+
+    </div>
 
 
 
