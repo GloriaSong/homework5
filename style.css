@@ -26,7 +26,7 @@ a:hover {
 .header {
     background-image: url("http://picovico.com/wp-content/uploads/2015/11/yourstory-education.jpg");
     background-position: bottom;
-    background-size: 100%;
+    background-size: cover;
     height: 440px;
     margin: auto;
 }
@@ -105,4 +105,8 @@ ol li:before {
 button {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#main1 #main2 {
+    margin: 5px;
 }
