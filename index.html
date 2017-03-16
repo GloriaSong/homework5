@@ -142,9 +142,9 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h2> Population by Age</h2>
-
+            <div id="main3" style="width: 900px;height:400px;"></div>
             <script>
                 option = {
                     tooltip: {
@@ -154,7 +154,8 @@
                         }
                     },
                     legend: {
-                        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎', '百度', '谷歌', '必应', '其他']
+                        data: ['Total Population', '0 - 4', '5 - 9', '10 - 14', '15 - 19', '20 - 24', '25 - 29', '30 - 34', '35 - 39', '40 - 44', '45 - 49', '50 - 54', '55 - 59', '60 - 64', '65 - 69', '70 - 74', '75 - 79', '80 - 84', '>= 85']
+
                     },
                     grid: {
                         left: '3%',
@@ -164,7 +165,7 @@
                     },
                     xAxis: [{
                         type: 'category',
-                        data: ['Male', 'Female', 'Both sexes', 'Both Sexes (% of total population)']
+                        data: ['Male', 'Female', 'Both sexes']
                     }],
                     yAxis: [{
                         type: 'value'
@@ -174,134 +175,124 @@
                         {
                             name: 'Total Population',
                             type: 'bar',
-                            data: [3352.0, 3900.9, 7252.9, 100],
-                            markLine: {
-                                lineStyle: {
-                                    normal: {
-                                        type: 'dashed',
-                                    },
-                                },
-                                data: [
-                                    [{
-                                        type: 'min'
-                                    }, {
-                                        type: 'max'
-                                    }]
-                                ]
-                            }
+                            data: [3352.0, 3900.9, 7252.9],
+
                         }, {
                             name: '0 - 4',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [140.3, 130.9, 271.2, 3.7]
+                            data: [140.3, 130.9, 271.2]
                         }, {
                             name: '5 - 9',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [139.3, 129.1, 268.4, 3.7],
+                            data: [139.3, 129.1, 268.4],
                         }, {
                             name: '10 - 14',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [138.6, 131.6, 270.2, 3.7]
+                            data: [138.6, 131.6, 270.2]
 
                         }, {
-                            name: '15 - 19 ',
-                            type: 'bar ',
+                            name: '15 - 19',
+                            type: 'bar',
                             barWidth: 5,
-                            stack: 'Total Population ',
-                            data: [192.2, 181.3, 373.5, 5.1]
+                            stack: 'Total Population',
+                            data: [192.2, 181.3, 373.5]
 
                         }, {
                             name: '20 - 24',
-                            type: 'bar ',
+                            type: 'bar',
                             barWidth: 5,
-                            stack: 'Total Population ',
-                            data: [223.4, 226.3, 449.7, 6.2]
+                            stack: 'Total Population',
+                            data: [223.4, 226.3, 449.7]
                         }, {
                             name: '25 - 29',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [224.5, 288, 512.5, 7.1],
+                            data: [224.5, 288, 512.5],
                         }, {
                             name: '30 - 34',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [232.8, 344.3, 577.1, 8],
+                            data: [232.8, 344.3, 577.1],
                         }, {
                             name: '35 - 39',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [225.1, 330.2, 555.3, 7.7],
+                            data: [225.1, 330.2, 555.3],
                         }, {
                             name: '40 - 44',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [239.6, 339.6, 579.2, 8]
+                            data: [239.6, 339.6, 579.2]
                         }, {
                             name: '45 - 49',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [250.5, 324.9, 575.4, 7.9]
+                            data: [250.5, 324.9, 575.4]
                         }, {
                             name: '50 - 54',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [308.4, 351.2, 659.6, 9.1]
+                            data: [308.4, 351.2, 659.6]
                         }, {
                             name: '55 - 59',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [295.6, 303.3, 598.9, 8.3],
+                            data: [295.6, 303.3, 598.9],
                         }, {
                             name: '60 - 64',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [230.1, 236.1, 466.2, 6.4]
+                            data: [230.1, 236.1, 466.2]
                         }, {
                             name: '65 - 69',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [172.7, 174.2, 346.9, 4.8],
+                            data: [172.7, 174.2, 346.9],
                         }, {
                             name: '70 - 74',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [110.6, 103, 213.6, 2.9]
+                            data: [110.6, 103, 213.6]
                         }, {
                             name: '75 - 79',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [100.9, 109, 209.9, 2.9]
+                            data: [100.9, 109, 209.9]
                         }, {
                             name: '80 - 84',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [74.9, 92.8, 167.7, 2.3],
+                            data: [74.9, 92.8, 167.7],
                         }, {
                             name: '>= 85',
                             type: 'bar',
                             barWidth: 5,
                             stack: 'Total Population',
-                            data: [52.5, 105.1, 157.6, 2.2]
+                            data: [52.5, 105.1, 157.6]
                         }
                     ]
                 }
+
+                var myChart3 = echarts.init(document.getElementById('main3'));
+                myChart3.setOption(option);
             </script>
 
 </body>
