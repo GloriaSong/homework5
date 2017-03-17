@@ -120,11 +120,6 @@ h3 {
     margin-left: 15%;
 }
 
-.text {
-    font-size: 16px;
-    margin-top: 40px;
-}
-
 .reference {
     font-size: 18px;
     background-color: seagreen;
@@ -162,4 +157,10 @@ p {
 
 .text {
     padding-left: 5%;
+    padding-top: 25px;
+}
+
+.text1 {
+    padding-right: 5%;
+    padding-top: 20px;
 }
