@@ -4,9 +4,9 @@ body {
 }
 
 #nav_container {
-    width: 850px;
+    width: 1200px;
     height: 40px;
-    background: #2980b9;
+    background: teal;
     margin: 0 auto;
     border-radius: 10px;
     text-align: center;
@@ -54,7 +54,7 @@ nav span:active {
 
 #selector {
     height: 40px;
-    width: 200px;
+    width: 350px;
     background: #8e44ad;
     position: relative;
     top: -27px;
@@ -161,5 +161,5 @@ p {
 }
 
 .text {
-    border-left: 5%;
+    padding-left: 5%;
 }
