@@ -25,6 +25,168 @@
         <h3>By Gloria Song</h3>
     </div>
 
+
+
+    <div class="row">
+        <h2> Population by Age</h2>
+        <div class="col-md-4">
+
+            <div id="main3" style="width: 400px;height:400px;"></div>
+            <script>
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    legend: {
+                        data: ['Total Population', '0 - 4', '5 - 9', '10 - 14', '15 - 19', '20 - 24', '25 - 29', '30 - 34', '35 - 39', '40 - 44', '45 - 49', '50 - 54', '55 - 59', '60 - 64', '65 - 69', '70 - 74', '75 - 79', '80 - 84', '>= 85']
+
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: [{
+                        type: 'category',
+                        data: ['Male', 'Female', 'Both sexes']
+                    }],
+                    yAxis: [{
+                        type: 'value'
+                    }],
+                    series: [
+
+                        {
+                            name: 'Total Population',
+                            type: 'bar',
+                            barWidth: 50,
+                            data: [3352.0, 3900.9, 7252.9],
+
+                        }, {
+                            name: '0 - 4',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [140.3, 130.9, 271.2]
+                        }, {
+                            name: '5 - 9',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [139.3, 129.1, 268.4],
+                        }, {
+                            name: '10 - 14',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [138.6, 131.6, 270.2]
+
+                        }, {
+                            name: '15 - 19',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [192.2, 181.3, 373.5]
+
+                        }, {
+                            name: '20 - 24',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [223.4, 226.3, 449.7]
+                        }, {
+                            name: '25 - 29',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [224.5, 288, 512.5],
+                        }, {
+                            name: '30 - 34',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [232.8, 344.3, 577.1],
+                        }, {
+                            name: '35 - 39',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [225.1, 330.2, 555.3],
+                        }, {
+                            name: '40 - 44',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [239.6, 339.6, 579.2]
+                        }, {
+                            name: '45 - 49',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [250.5, 324.9, 575.4]
+                        }, {
+                            name: '50 - 54',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [308.4, 351.2, 659.6]
+                        }, {
+                            name: '55 - 59',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [295.6, 303.3, 598.9],
+                        }, {
+                            name: '60 - 64',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [230.1, 236.1, 466.2]
+                        }, {
+                            name: '65 - 69',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [172.7, 174.2, 346.9],
+                        }, {
+                            name: '70 - 74',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [110.6, 103, 213.6]
+                        }, {
+                            name: '75 - 79',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [100.9, 109, 209.9]
+                        }, {
+                            name: '80 - 84',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [74.9, 92.8, 167.7],
+                        }, {
+                            name: '>= 85',
+                            type: 'bar',
+                            barWidth: 15,
+                            stack: 'Total Population',
+                            data: [52.5, 105.1, 157.6]
+                        }
+                    ]
+                }
+
+                var myChart3 = echarts.init(document.getElementById('main3'));
+                myChart3.setOption(option);
+            </script>
+        </div>
+        <div class="col-md-8">
+            <p>In Hong Kong, the population of residents over 15 years age represents 88.85 percent of the total population. The educational level of the population of Hong Kong has improved appreciably over the 5 years. </p>
+        </div>
+    </div>
     <div class="container">
 
         <h3>Distribution of Educational Attainment of Population Aged 15 and Over</h3>
@@ -140,161 +302,187 @@
 
     </div>
     </div>
-
     <div class="row">
-        <div class="col-md-12">
-            <h2> Population by Age</h2>
-            <div id="main3" style="width: 900px;height:400px;"></div>
+        <div class="col-md-6">
+            <div class="text">
+                <p>Labour force participation at the macro level, typically expressed in terms of labour force participation rate (LFPR), is determined by a nexus of social and policy factors namely cultural perception and work arrangement practices on the
+                    one hand, and economic and structural factors such as labour market conditions and demographic composition on the other.
+                </p>
+                <p>In particular, educational attainment is often regarded as a key economic factor determining LFPR. It comes into the decision to work in two ways. </p>
+                <p>First, higher educational attainment is often associated with higher wages, which in turn suggests that the opportunity cost of not working is higher for the more educated ones. </p>
+                <p>Second, those who have received more education tend to be more versatile and adaptable to changes in the labour market, essentially meaning a higher chance of getting employed. They are thus less prone to long term unemployment or to become
+                    discouraged workers. </p>
+                <p>A detailed analysis of LFPR(1) of those aged 25 – 64 over the last two decades, who accounted for almost 90% of our labour force in 2013, indeed demonstrated that educational attainment plays an important role in determining Hong Kong’s
+                    labour force participation.</p>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="main4" style="width: 600px; height:600px"></div>
+
             <script>
                 option = {
-                    tooltip: {
-                        trigger: 'axis',
-                        axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-                        }
-                    },
-                    legend: {
-                        data: ['Total Population', '0 - 4', '5 - 9', '10 - 14', '15 - 19', '20 - 24', '25 - 29', '30 - 34', '35 - 39', '40 - 44', '45 - 49', '50 - 54', '55 - 59', '60 - 64', '65 - 69', '70 - 74', '75 - 79', '80 - 84', '>= 85']
-
+                    title: {
+                        text: 'Median Monthly Income of Bachelor Degree Holder By Age Group',
+                        subtext: 'Data Source: Data. Gov',
+                        top: '5%',
                     },
                     grid: {
-                        left: '3%',
-                        right: '4%',
-                        bottom: '3%',
-                        containLabel: true
+                        top: '25%'
                     },
-                    xAxis: [{
-                        type: 'category',
-                        data: ['Male', 'Female', 'Both sexes']
-                    }],
-                    yAxis: [{
-                        type: 'value'
-                    }],
-                    series: [
-
-                        {
-                            name: 'Total Population',
-                            type: 'bar',
-                            data: [3352.0, 3900.9, 7252.9],
-
-                        }, {
-                            name: '0 - 4',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [140.3, 130.9, 271.2]
-                        }, {
-                            name: '5 - 9',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [139.3, 129.1, 268.4],
-                        }, {
-                            name: '10 - 14',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [138.6, 131.6, 270.2]
-
-                        }, {
-                            name: '15 - 19',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [192.2, 181.3, 373.5]
-
-                        }, {
-                            name: '20 - 24',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [223.4, 226.3, 449.7]
-                        }, {
-                            name: '25 - 29',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [224.5, 288, 512.5],
-                        }, {
-                            name: '30 - 34',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [232.8, 344.3, 577.1],
-                        }, {
-                            name: '35 - 39',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [225.1, 330.2, 555.3],
-                        }, {
-                            name: '40 - 44',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [239.6, 339.6, 579.2]
-                        }, {
-                            name: '45 - 49',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [250.5, 324.9, 575.4]
-                        }, {
-                            name: '50 - 54',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [308.4, 351.2, 659.6]
-                        }, {
-                            name: '55 - 59',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [295.6, 303.3, 598.9],
-                        }, {
-                            name: '60 - 64',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [230.1, 236.1, 466.2]
-                        }, {
-                            name: '65 - 69',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [172.7, 174.2, 346.9],
-                        }, {
-                            name: '70 - 74',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [110.6, 103, 213.6]
-                        }, {
-                            name: '75 - 79',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [100.9, 109, 209.9]
-                        }, {
-                            name: '80 - 84',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [74.9, 92.8, 167.7],
-                        }, {
-                            name: '>= 85',
-                            type: 'bar',
-                            barWidth: 5,
-                            stack: 'Total Population',
-                            data: [52.5, 105.1, 157.6]
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['2011', '2012', '2013', '2014', '2015']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            dataZoom: {
+                                yAxisIndex: 'none'
+                            },
+                            dataView: {
+                                readOnly: false
+                            },
+                            magicType: {
+                                type: ['line', 'bar']
+                            },
+                            restore: {},
+                            saveAsImage: {}
                         }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['2011', '2012', '2013', '2014', '2015']
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '${value}'
+                        }
+                    },
+                    series: [{
+                            name: '20-24',
+                            type: 'line',
+                            data: [9100, 10000, 10000, 10800, 11000],
+
+
+                        }, {
+                            name: '25-29',
+                            type: 'line',
+                            data: [14000, 15000, 15000, 15000, 16000],
+
+
+                        }, {
+                            name: '30-34',
+                            type: 'line',
+                            data: [20000, 28000, 21600, 22200, 23800],
+
+
+                        }, {
+                            name: '35-39',
+                            type: 'line',
+                            data: [28000, 28000, 28000, 30000, 30000],
+
+
+                        }, {
+                            name: '40-44',
+                            type: 'line',
+                            data: [30000, 30000, 33000, 33800, 35000],
+
+                        }, {
+                            name: '45-49',
+                            type: 'line',
+                            data: [31000, 33800, 36000, 35200, 38800],
+
+
+                        }, {
+                            name: '50-54',
+                            type: 'line',
+                            data: [35000, 39000, 40000, 40000, 40000],
+
+
+                        }, {
+                            name: '55-59',
+                            type: 'line',
+                            data: [37000, 40000, 40000, 40000, 40000],
+
+
+                        }, {
+                            name: '>=60',
+                            type: 'line',
+                            data: [30000, 30000, 30000, 30000, 35000],
+
+
+                        }, {
+                            name: 'Overall',
+                            type: 'line',
+                            data: [20500, 21000, 22000, 23000, 25000],
+                            markPoint: {
+                                data: [{
+                                    type: 'max',
+                                    name: '最大值'
+                                }, {
+                                    type: 'min',
+                                    name: '最小值'
+                                }]
+                            },
+                            markLine: {
+                                data: [{
+                                        type: 'average',
+                                        name: '平均值'
+                                    },
+                                    [{
+                                        symbol: 'none',
+                                        x: '90%',
+                                        yAxis: 'max'
+                                    }, {
+                                        symbol: 'circle',
+                                        label: {
+                                            normal: {
+                                                position: 'start',
+                                                formatter: '最大值'
+                                            }
+                                        },
+                                        type: 'max',
+                                        name: '最高点'
+                                    }]
+                                ]
+                            }
+                        }
+
+
                     ]
-                }
+                };
 
-                var myChart3 = echarts.init(document.getElementById('main3'));
-                myChart3.setOption(option);
+                var myChart4 = echarts.init(document.getElementById('main4'));
+                myChart4.setOption(option);
             </script>
+        </div>
 
+
+    </div>
+
+    </div>
+
+    <div class="reference">
+        <h2>Data Sources</h2>
+        <ol>
+            <li>
+                <a href="http://www.gov.hk/en/about/abouthk/factsheets/docs/population.pdf" target="_blank">Hong Kong Fact Sheets - Population - GovHK</a>
+            </li>
+            <li> <a href="http://www.hkeconomy.gov.hk/en/pdf/box-14q3-5-1.pdf" target="_blank">Labour force participation and educational attainment in Hong Kong </a> </li>
+
+            <li><a href="http://www.censtatd.gov.hk/hkstat/sub/gender/education_and_training/index.jsp" target="_blank">
+            Education and Training Characteristics</a></li>
+            <li><a href="https://data.gov.hk/sc/" target="_blank"> DATA.GOV.HK    </a></li>
+
+
+        </ol>
+
+    </div>
 </body>
 
 </html>

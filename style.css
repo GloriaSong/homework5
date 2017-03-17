@@ -86,6 +86,7 @@ tr {
 
 .reference {
     font-size: 18px;
+    background-color: seagreen;
 }
 
 ol {
@@ -109,4 +110,13 @@ button {
 
 #main1 #main2 {
     margin: 5px;
+}
+
+p {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text {
+    border: 5%;
 }
