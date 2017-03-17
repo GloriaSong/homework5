@@ -3,6 +3,18 @@ body {
     ;
 }
 
+#nav_container {
+    width: 850px;
+    height: 40px;
+    background: #2980b9;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 0px #1F5A87, 0px 0px 7px black;
+}
+
 a:link {
     color: #ffffff;
     font-weight: bold;
@@ -19,8 +31,47 @@ a:visited {
 }
 
 a:hover {
-    color: yellow;
+    color: darkblue;
     font-weight: bolder;
+}
+
+nav span {
+    margin-left: 80px;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+    top: 10px;
+    left: -25px;
+    z-index: 1;
+    padding: 50px 0px 50px 0px;
+    cursor: pointer;
+}
+
+nav span:active {
+    opacity: 0.3;
+}
+
+#selector {
+    height: 40px;
+    width: 200px;
+    background: #8e44ad;
+    position: relative;
+    top: -27px;
+    left: 61px;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#shape {
+    border-bottom: 20px solid #5B2B6D;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 70px;
+    -webkit-transform: rotate(180deg);
+    position: relative;
+    top: 70px;
 }
 
 .header {
@@ -74,16 +125,6 @@ h3 {
     margin-top: 40px;
 }
 
-.table {
-    padding: 15px;
-}
-
-table td,
-tr {
-    border: solid 2px darkslateblue;
-    padding: 3px;
-}
-
 .reference {
     font-size: 18px;
     background-color: seagreen;
@@ -115,8 +156,10 @@ button {
 p {
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    border-left: 5%;
 }
 
 .text {
-    border: 5%;
+    border-left: 5%;
 }

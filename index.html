@@ -20,6 +20,33 @@
 </head>
 
 <body>
+    <div id="nav_container">
+        <nav>
+            <span><a href="https://gloriasong00852.wordpress.com/">My website</a></span>
+            <span><a href="https://gloriasong.github.io/homework5#Population">Population By Age</a></span>
+            <span><a href="https://www.usnews.com/education/best-colleges/the-short-list-college/articles/2016-09-13/10-most-least-expensive-private-colleges" target="_blank">More Information</a></span>
+        </nav>
+        <div id="selector"></div>
+        <script>
+            $("span:nth-child(1)").mouseover(function() {
+                $("#selector").animate({
+                    "left": "10.8%"
+                }, 200);
+            });
+            $("span:nth-child(2)").mouseover(function() {
+                $("#selector").animate({
+                    "left": "36.5%"
+                }, 200);
+            });
+            $("span:nth-child(3)").mouseover(function() {
+                $("#selector").animate({
+                    "left": "66.1%"
+                }, 200);
+            });
+        </script>
+    </div>
+    <!--navigation container end-->
+
     <div class="header">
         <h1>Educational Attainment </br>of Hong Kong People</h1>
         <h3>By Gloria Song</h3>
@@ -28,10 +55,10 @@
 
 
     <div class="row">
-        <h2> Population by Age</h2>
-        <div class="col-md-4">
+        <h2><a name="exactline"> Population</a> by Age</h2>
+        <div class="col-md-6">
 
-            <div id="main3" style="width: 400px;height:400px;"></div>
+            <div id="main3" style="width: 600px;height:600px;"></div>
             <script>
                 option = {
                     tooltip: {
@@ -183,13 +210,13 @@
                 myChart3.setOption(option);
             </script>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
             <p>In Hong Kong, the population of residents over 15 years age represents 88.85 percent of the total population. The educational level of the population of Hong Kong has improved appreciably over the 5 years. </p>
         </div>
     </div>
     <div class="container">
 
-        <h3>Distribution of Educational Attainment of Population Aged 15 and Over</h3>
+        <h2><a name="exactline">Distributionof Educational Attainment of </br>Population Aged 15 and Over</a> </h2>
         <div class="row">
             <div class="col-md-6">
 
